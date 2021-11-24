@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rm_navigation"
+    app:startDestination="@id/charactersListFragment">
+
+    <fragment
+        android:id="@+id/charactersListFragment"
+        android:name="com.te.rickandmortypeople.view.CharactersListFragment"
+        android:label="Rick &amp; Morty People"
+
+        tools:layout="@layout/fragment_characters_list">
+
+
+        <action
+            android:id="@+id/action_listToDetails"
+            app:destination="@id/characterDetailsFragment">
+            <argument
+                android:name="listState"
+                app:argType="string"
+                app:nullable="true" />
+        </action>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/characterDetailsFragment"
+        android:name="com.te.rickandmortypeople.view.fragments.CharacterDetailsFragment"
+        android:label="details"
+        tools:layout="@layout/fragment_character_details">
+
+        <action
+            android:id="@+id/action_detailsToList"
+            app:destination="@id/charactersListFragment">
+            <argument
+                android:name="character"
+                app:argType="com.te.rickandmortypeople.model.Character"
+                app:nullable="true" />
+
+            <argument
+                android:name="listState"
+                app:argType="string"
+                app:nullable="true" />
+        </action>
+
+        <argument
+            android:name="character"
+            app:argType="com.te.rickandmortypeople.model.Character"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_detailsToEpisodes"
+            app:destination="@id/episodesListFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/episodesListFragment"
+        android:name="com.te.rickandmortypeople.view.fragments.EpisodesListFragment"
+        android:label="character's episodes:"
+        tools:layout="@layout/fragment_episodes_list">
+
+        <argument
+            android:name="episodes"
+            app:argType="string[]" />
+        <argument
+            android:name="character"
+            app:argType="com.te.rickandmortypeople.model.Character"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_episodesToDetails"
+            app:destination="@id/characterDetailsFragment" />
+
+
+    </fragment>
+
+
+
+</navigation>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="character"
+            type="com.te.rickandmortypeople.model.Character" />
+        <variable
+            name="listener"
+            type="com.te.rickandmortypeople.util.CharacterClickListener" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/characterLayout"
+    android:onClick="@{listener::onClick}"
+    android:tag="@{character.id}"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="2dp"
+    android:paddingStart="2dp"
+    android:paddingEnd="2dp"
+    android:background="@color/primaryLightestColor"
+    >
+
+    <ImageView
+        android:id="@+id/charactersImage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="center"
+        android:imageUrl="@{character.image}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/charactersName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/charactersImage"
+        app:layout_constraintEnd_toEndOf="@id/charactersImage"
+        app:layout_constraintStart_toStartOf="@id/charactersImage"
+        android:text="@{character.name}"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

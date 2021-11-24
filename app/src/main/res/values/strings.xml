@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Rick And Morty People</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Search a character</string>
+    <string name="dialog_question">Problem with Internet connection. Do you want to wait?</string>
+    <string name="wait">wait</string>
+    <string name="close_app">close app</string>
+    <string name="status">Status:</string>
+    <string name="species">Species:</string>
+    <string name="type">Type:</string>
+    <string name="gender">Gender:</string>
+    <string name="location">Location:</string>
+    <string name="origin">Origin:</string>
+    <string name="check_list_of_the_episodes">list of character\'s episodes</string>
+    <string name="title">TITLE:</string>
+    <string name="number">NUMBER:</string>
+    <string name="air_date">AIR DATE:</string>
+</resources>

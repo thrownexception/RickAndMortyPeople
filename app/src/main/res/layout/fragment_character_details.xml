@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="character"
+            type="com.te.rickandmortypeople.model.Character" />
+
+        <variable
+            name="palette"
+            type="com.te.rickandmortypeople.model.CharacterPalette" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@{palette.colour}"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:context=".view.fragments.CharacterDetailsFragment">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imageUrl="@{character.image}"
+                android:padding="16dp"
+                android:background="#afff"
+                android:minHeight="200dp"
+                android:scaleType="center"/>
+
+            <TextView
+                android:id="@+id/charactersName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{character.name}"
+                style="@style/Title"
+                android:background="@color/primaryDarkColor"
+                android:textColor="@color/white"
+                android:padding="4dp"
+                android:gravity="center_horizontal"
+                android:scaleType="centerInside"
+                />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="2dp"
+                android:gravity="center_horizontal"
+                android:scaleType="centerInside"
+                android:text="@string/status"/>
+
+            <TextView
+                style="@style/Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:padding="2dp"
+                android:background="#afff"
+                android:text="@{character.status}" />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="2dp"
+                android:scaleType="center"
+                android:text="@string/species" />
+
+            <TextView
+                style="@style/Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="#afff"
+                android:text="@{character.species}" />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="2dp"
+                android:scaleType="center"
+                android:text="@string/type" />
+
+            <TextView
+                style="@style/Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="#afff"
+                android:text="@{character.type}" />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="2dp"
+                android:text="@string/gender" />
+
+            <TextView
+                style="@style/Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="#afff"
+                android:text="@{character.gender}" />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="2dp"
+                android:text="@string/location" />
+
+            <TextView
+                style="@style/Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#afff"
+                android:padding="2dp"
+                android:text="@{character.location.locationName}" />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="2dp"
+                android:text="@string/origin" />
+
+            <TextView
+                style="@style/Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#afff"
+                android:padding="2dp"
+                android:text="@{character.origin.originName}" />
+
+            <Button
+                android:id="@+id/episodesButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/check_list_of_the_episodes"
+                android:textColor="@color/primaryTextColor"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

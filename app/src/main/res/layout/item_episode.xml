@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="episode"
+            type="com.te.rickandmortypeople.model.Episode" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/episodeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryLightColor">
+
+        <TextView
+            android:id="@+id/emptyStart"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/eTitle"/>
+
+        <TextView
+            android:id="@+id/eTitle"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/primaryDarkColor"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textColor="@color/primaryLightColor"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/episodeTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emptyStart"/>
+
+        <TextView
+            android:id="@+id/episodeTitle"
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/primaryColor"
+            android:text="@{episode.title}"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/eNummber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eTitle" />
+
+        <TextView
+            android:id="@+id/eNummber"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textSize="14sp"
+            android:text="@string/number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/episodeTitle"
+            app:layout_constraintBottom_toTopOf="@+id/episodeNumber"
+            android:background="@color/primaryDarkColor"
+            android:textColor="@color/primaryLightColor"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/episodeNumber"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@{episode.episodeNumber}"
+            android:textAlignment="center"
+            style="@style/Title"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/eNummber"
+            app:layout_constraintBottom_toTopOf="@id/eAirDate"
+            android:background="@color/primaryColor"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/eAirDate"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textSize="14sp"
+            android:text="@string/air_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/episodeNumber"
+            app:layout_constraintBottom_toTopOf="@id/episodeAirDate"
+            android:background="@color/primaryDarkColor"
+            android:textColor="@color/primaryLightColor"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/episodeAirDate"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@{episode.airDate}"
+            android:textAlignment="center"
+            style="@style/Title"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eAirDate"
+            app:layout_constraintBottom_toTopOf="@id/emptyEnd"
+            android:background="@color/primaryColor"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/emptyEnd"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/episodeAirDate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/primaryLightColor"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
