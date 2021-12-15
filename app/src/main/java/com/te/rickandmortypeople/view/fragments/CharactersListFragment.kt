@@ -1,4 +1,4 @@
-package com.te.rickandmortypeople.view
+package com.te.rickandmortypeople.view.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -15,6 +15,7 @@ import com.te.rickandmortypeople.R
 import android.view.MenuItem
 import android.view.inputmethod.InputMethodManager
 import android.view.MenuInflater
+import com.te.rickandmortypeople.view.CharactersListAdapter
 import com.te.rickandmortypeople.viewmodel.CharactersListViewModel
 
 

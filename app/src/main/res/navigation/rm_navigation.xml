@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/charactersListFragment"
-        android:name="com.te.rickandmortypeople.view.CharactersListFragment"
+        android:name="com.te.rickandmortypeople.view.fragments.CharactersListFragment"
         android:label="Rick &amp; Morty People"
 
         tools:layout="@layout/fragment_characters_list">

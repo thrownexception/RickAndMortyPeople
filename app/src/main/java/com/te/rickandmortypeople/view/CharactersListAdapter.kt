@@ -10,6 +10,7 @@ import com.te.rickandmortypeople.R
 import com.te.rickandmortypeople.databinding.ItemCharacterBinding
 import com.te.rickandmortypeople.model.Character
 import com.te.rickandmortypeople.util.CharacterClickListener
+import com.te.rickandmortypeople.view.fragments.CharactersListFragmentDirections
 
 class CharactersListAdapter(private val charactersList: ArrayList<Character>):
         RecyclerView.Adapter<CharactersListAdapter.CharacterViewHolder>(),

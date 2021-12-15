@@ -15,6 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.te.rickandmortypeople.model.Character
+import com.te.rickandmortypeople.view.EpisodesListAdapter
 import kotlin.collections.ArrayList
 
 @AndroidEntryPoint

@@ -1,4 +1,4 @@
-package com.te.rickandmortypeople.view.fragments
+package com.te.rickandmortypeople.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

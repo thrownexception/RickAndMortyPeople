@@ -14,7 +14,7 @@
         android:id="@+id/charactersListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.CharactersListFragment">
+        tools:context=".view.fragments.CharactersListFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/charactersList"

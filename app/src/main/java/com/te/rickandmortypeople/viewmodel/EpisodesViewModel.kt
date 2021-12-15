@@ -62,7 +62,6 @@ class EpisodesViewModel @Inject constructor(application: Application): AndroidVi
 
     private fun getTheRestOfEpisodes(page:Int){
         if (page >= 2){
-//            var endRange = page +1
             for (x in 1..3){
                 jobRestFromApi = CoroutineScope(Dispatchers.IO).launch {
                     val call = apiService.getRestOfEpisodes(x)
